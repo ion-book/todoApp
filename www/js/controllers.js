@@ -1,8 +1,7 @@
 angular.module('starter.controllers', [])
 
 .controller('TodayCtrl', function(){
-  $scope.task =
-  {
+  $scope.task = {
     id:1,
     title: 'Hacer las compras',
     description: 'Dulces, leche, chocolates y gomitas',
