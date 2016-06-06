@@ -1,10 +1,14 @@
 <ion-view view-title="Para Hoy">
   <ion-content>
-    <h3>{{ task.title }}</h3>
-    <p>{{ task.description }}</p>
-    <p>{{ task.date | date: "shortTime" }}</p>
-    <p ng-show="task.done">Si</p>
-    <p ng-show="!task.done">No</p>
+    <ion-list>
+      <ion-item ng-repeat="task in tasks" class="item-icon-left">
+        <i ng-show="task.done" class="icon ion-checkmark"></i>
+        <i ng-show="!task.done" class="icon ion-alert"></i>
+        <h2>{{ task.title }}</h2>
+        <p>{{ task.description }}</p>
+        <span>{{ task.date | date: "shortTime" }}</span>
+      </ion-item>
+    </ion-list>
   </ion-content>
 </ion-view>
 
