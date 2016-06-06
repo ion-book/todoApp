@@ -19,6 +19,7 @@ angular.module('starter.controllers', [])
   ]
 })
 .controller('AllCtrl', function( $scope ){
+  
   $scope.dates = [
     {
       dateGroup: new Date(2015, 6, 5),
