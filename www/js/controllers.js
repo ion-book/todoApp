@@ -1,6 +1,6 @@
 angular.module('starter.controllers', [])
 
-.controller('TodayCtrl', function(){
+.controller('TodayCtrl', function( $scope ){
   $scope.task = {
     id:1,
     title: 'Hacer las compras',

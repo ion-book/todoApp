@@ -1,5 +1,10 @@
 <ion-view view-title="Para Hoy">
   <ion-content>
-    <h1>Tab que muestra las tareas de la fecha actual</h1>
+    <h3>{{ task.title }}</h3>
+    <p>{{ task.description }}</p>
+    <p>{{ task.date | date: "shortTime" }}</p>
+    <p ng-show="task.done">Si</p>
+    <p ng-show="!task.done">No</p>
   </ion-content>
 </ion-view>
+

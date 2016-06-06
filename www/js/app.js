@@ -46,7 +46,7 @@ angular.module('starter', [
     }
   })
   
-  $urlRouterProvider.otherwise('/tab/today')
+  $urlRouterProvider.otherwise('/tab/all')
   
 })
 
