@@ -6,7 +6,44 @@
 angular.module('starter', ['ionic'])
 
 .config(function($stateProvider, $urlRouterProvider){
-  //Definir las rutas
+  
+  $stateProvider
+  
+  .state('tab', {
+    url: '/tab',
+    abstract: true,
+    templateUrl: 'templates/tabs.html'
+  })
+  
+  .state('tab.today', {
+    url: '/today',
+    views: {
+      'tab-today': {
+        templateUrl: 'templates/tab-today.html'
+      }
+    }
+  })
+  
+  .state('tab.all', {
+    url: '/all',
+    views: {
+      'tab-all': {
+        templateUrl: 'templates/tab-all.html'
+      }
+    }
+  })
+  
+  .state('tab.done', {
+    url: '/done',
+    views: {
+      'tab-done': {
+        templateUrl: 'templates/tab-done.html'
+      }
+    }
+  })
+  
+  $urlRouterProvider.otherwise('/tab/today')
+  
 })
 
 .run(function($ionicPlatform) {
