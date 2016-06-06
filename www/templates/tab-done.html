@@ -1,6 +1,17 @@
 <ion-view view-title="Hecho">
   <ion-content>
-    <h1>Tab que muestra las tareas hechas (completadas)</h1>
+    <ion-list ng-repeat="date in dates">
+      <ion-item>
+        {{ date.dateGroup | date: 'short' }}
+      </ion-item>
+      <ion-item ng-repeat="task in date.tasks | filter: {done: true}" class="item-icon-left">
+        <i ng-show="task.done" class="icon ion-checkmark"></i>
+        <i ng-show="!task.done" class="icon ion-alert"></i>
+        <h2>{{ task.title }}</h2>
+        <p>{{ task.description }}</p>
+        <span>{{ task.date | date: "shortTime" }}</span>
+      </ion-item>
+    </ion-list>
   </ion-content>
 </ion-view>
 
