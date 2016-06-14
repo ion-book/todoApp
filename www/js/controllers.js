@@ -1,6 +1,18 @@
 angular.module('starter.controllers', [])
 
-.controller('TodayCtrl', function( $scope ){
+.controller('TodayCtrl', function( $scope, $ionicModal ){
+  
+  $scope.modal = null;
+  
+  $ionicModal.fromTemplateUrl('templates/todo-modal.html', {
+    scope: $scope,
+    animation: 'slide-in-up'
+  })
+  .then(function( modal ){
+    $scope.modal = modal;
+  });
+  
+  
   $scope.tasks = [
     {
       id:1,
