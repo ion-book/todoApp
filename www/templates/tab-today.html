@@ -1,4 +1,7 @@
 <ion-view view-title="Para Hoy">
+  <ion-nav-buttons side="right">
+    <button class="button" ng-click="openModal()">Nueva</button>
+  </ion-nav-buttons>
   <ion-content>
     <ion-list>
       <ion-item ng-repeat="task in tasks" class="item-icon-left">
