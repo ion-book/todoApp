@@ -12,6 +12,14 @@ angular.module('starter.controllers', [])
     $scope.modal = modal;
   });
   
+  $scope.openModal = function(){
+    $scope.modal.show();
+  }
+  
+  $scope.closeModal = function() {
+    $scope.modal.hide();
+  }
+  
   
   $scope.tasks = [
     {
