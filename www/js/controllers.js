@@ -4,7 +4,7 @@ angular.module('starter.controllers', [])
   
   $scope.modal = null;
   
-  $ionicModal.fromTemplateUrl('templates/todo-modal.html', {
+  $ionicModal.fromTemplateUrl('templates/task-modal.html', {
     scope: $scope,
     animation: 'slide-in-up'
   })
