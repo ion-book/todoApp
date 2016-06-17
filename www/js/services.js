@@ -4,7 +4,7 @@ angular.module('starter.services', [])
   var tasks = [];
   return {
     getAllTasks: function(){
-      //Implementar codigo
+      return tasks;
     },
     createTask: function(){
       //Implementar codigo
