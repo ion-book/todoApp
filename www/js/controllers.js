@@ -35,6 +35,7 @@ angular.module('starter.controllers', [])
   }
   
   $scope.closeModal = function() {
+    $scope.task = {};
     $scope.modal.hide();
   }
   
