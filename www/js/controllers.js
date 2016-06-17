@@ -55,6 +55,11 @@ angular.module('starter.controllers', [])
     $scope.closeModal();
   }
   
+  $scope.addTask = function(){
+    $scope.tasks.push( $scope.task );
+    $scope.closeModal();
+  }
+  
 })
 .controller('AllCtrl', function( $scope ){
   
