@@ -15,17 +15,17 @@ angular.module('starter.services', [])
       return tasks;
     },
     getGroupDate: function(){
-      var tasks = tasks.map(function(item){
+      var allTasks = tasks.map(function(item){
         var date = new Date( item.date );
         item.dateGroup = new Date(date.getFullYear(), date.getMonth(), date.getDate());
         return item;
       });
-      return _.map(_.groupBy, 'dateGroup', function(tasks, i){
+      return _.map(_.groupBy( allTasks, 'dateGroup', function(tasks, i){
         return {
           dateGroup: new Date(i),
           tasks: tasks
         }
-      });
+      }));
     },
   }
 })
