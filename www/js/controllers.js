@@ -60,6 +60,10 @@ angular.module('starter.controllers', [])
     $scope.closeModal();
   }
   
+  $scope.updateTask = function() {
+    $scope.closeModal();
+  }
+  
 })
 .controller('AllCtrl', function( $scope ){
   
