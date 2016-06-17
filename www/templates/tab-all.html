@@ -1,10 +1,13 @@
 <ion-view view-title="Todo">
+  <ion-nav-buttons side="right">
+    <button class="button" ng-click="newTask()">Nueva</button>
+  </ion-nav-buttons>
   <ion-content>
     <ion-list ng-repeat="date in dates">
       <ion-item>
         {{ date.dateGroup | date: 'short' }}
       </ion-item>
-      <ion-item ng-repeat="task in date.tasks" class="item-icon-left">
+      <ion-item ng-repeat="task in date.tasks" class="item-icon-left" ng-click="editTask(task)">
         <i ng-show="task.done" class="icon ion-checkmark"></i>
         <i ng-show="!task.done" class="icon ion-alert"></i>
         <h2>{{ task.title }}</h2>

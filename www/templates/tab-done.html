@@ -4,7 +4,7 @@
       <ion-item>
         {{ date.dateGroup | date: 'short' }}
       </ion-item>
-      <ion-item ng-repeat="task in date.tasks | filter: {done: true}" class="item-icon-left">
+      <ion-item ng-repeat="task in date.tasks | filter: {done: true}" class="item-icon-left" ng-click="editTask(task)">
         <i ng-show="task.done" class="icon ion-checkmark"></i>
         <i ng-show="!task.done" class="icon ion-alert"></i>
         <h2>{{ task.title }}</h2>

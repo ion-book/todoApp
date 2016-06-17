@@ -20,12 +20,12 @@ angular.module('starter.services', [])
         item.dateGroup = new Date(date.getFullYear(), date.getMonth(), date.getDate());
         return item;
       });
-      return _.map(_.groupBy( allTasks, 'dateGroup', function(tasks, i){
+      return _.map(_.groupBy(allTasks, 'dateGroup'), function(tasks, i){
         return {
           dateGroup: new Date(i),
           tasks: tasks
         }
-      }));
+      });
     },
   }
 })

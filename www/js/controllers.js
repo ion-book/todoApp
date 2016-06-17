@@ -64,7 +64,6 @@ angular.module('starter.controllers', [])
   $scope.is_new = true;
   $scope.task = {};
   $scope.dates = TasksService.getGroupDate();
-  console.log( $scope.dates );
   
   $ionicModal.fromTemplateUrl('templates/task-modal.html', {
     scope: $scope,
