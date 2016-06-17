@@ -36,8 +36,7 @@ angular.module('starter.controllers', [])
   }
   
   $scope.deleteTask = function(){
-    var index = $scope.tasks.indexOf( $scope.task );
-    if ( index > -1 ) $scope.tasks.splice( index, 1 );
+    TasksService.deleteTask( $scope.task );
     $scope.closeModal();
   }
   
