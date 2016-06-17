@@ -1,6 +1,6 @@
 angular.module('starter.controllers', [])
 
-.controller('TodayCtrl', function( $scope, $ionicModal ){
+.controller('TodayCtrl', function( $scope, $ionicModal, TasksService ){
   
   $scope.modal = null;
   $scope.is_new = true;
