@@ -65,6 +65,10 @@ angular.module('starter.controllers', [])
   $scope.task = {};
   $scope.dates = TasksService.getGroupDate();
   
+  $scope.$on("$ionicView.afterEnter", function(event, data){
+    $scope.dates = TasksService.getGroupDate();
+  });
+  
   $ionicModal.fromTemplateUrl('templates/task-modal.html', {
     scope: $scope,
     animation: 'slide-in-up'
@@ -130,6 +134,10 @@ angular.module('starter.controllers', [])
   })
   .then(function( modal ){
     $scope.modal = modal;
+  });
+  
+  $scope.$on("$ionicView.afterEnter", function(event, data){
+    $scope.dates = TasksService.getGroupDate();
   });
   
   $scope.openModal = function(){
