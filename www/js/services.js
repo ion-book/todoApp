@@ -20,10 +20,10 @@ angular.module('starter.services', [])
         item.dateGroup = new Date(date.getFullYear(), date.getMonth(), date.getDate());
         return item;
       });
-      return _.map(_.groupBy, 'dateGroup', function(item, i){
+      return _.map(_.groupBy, 'dateGroup', function(tasks, i){
         return {
           dateGroup: new Date(i),
-          tasks: item
+          tasks: tasks
         }
       });
     },
