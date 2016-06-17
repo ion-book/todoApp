@@ -6,8 +6,8 @@ angular.module('starter.services', [])
     getAllTasks: function(){
       return tasks;
     },
-    createTask: function(){
-      //Implementar codigo
+    createTask: function( newTask ){
+      tasks.push( newTask );
     },
     deleteTask: function(){
       //Implementar codigo
