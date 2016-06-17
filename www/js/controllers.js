@@ -64,6 +64,14 @@ angular.module('starter.controllers', [])
     $scope.closeModal();
   }
   
+  $scope.saveTask = function() {
+    if($scop.is_new){
+      $scope.addTask();
+    }else{
+      $scope.updateTask();
+    }
+  }
+  
 })
 .controller('AllCtrl', function( $scope ){
   
