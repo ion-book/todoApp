@@ -4,6 +4,32 @@
     <button class="button" ng-click="closeModal()">Cerrar</button>
   </ion-header-bar>
   <ion-content>
-    <h1>Hola soy un modal</h1>
+    <form name="FormTask" novalidate>
+      <div class="list">
+        <label class="item item-input item-stacked-label">
+          <span class="input-labe">Titulo:</span>
+          <input type="text" ng-model="task.title" required>
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-labe">Descripción:</span>
+          <input type="text" ng-model="task.description" required>
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-labe">Fecha:</span>
+          <input type="datetime-local" ng-model="task.date" required>
+        </label>
+        <ion-toggle ng-model="task.done">¿Hecho?</ion-toggle>
+      </div>
+      <div class="row">
+        <div class="col">
+          <button type="button" class="button button-block button-assertive">Eliminar</button>
+        </div>
+        <div class="col">
+          <button type="submit" class="button button-block button-balanced" ng-disabled="FormTask.$invalid">
+            Guardar
+          </button>
+        </div>
+      </div>
+    </form>
   </ion-content>
 </ion-modal-view>
