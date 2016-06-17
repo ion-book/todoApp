@@ -66,7 +66,7 @@ angular.module('starter.controllers', [])
   }
   
   $scope.saveTask = function() {
-    if($scop.is_new){
+    if($scope.is_new){
       $scope.addTask();
     }else{
       $scope.updateTask();
