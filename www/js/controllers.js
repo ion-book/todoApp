@@ -49,6 +49,12 @@ angular.module('starter.controllers', [])
     $scope.openModal();
   }
   
+  $scope.deleteTask = function(){
+    var index = $scope.tasks.indexOf( $scope.task );
+    if ( index > -1 ) $scope.tasks.splice( index, 1 );
+    $scope.closeModal();
+  }
+  
 })
 .controller('AllCtrl', function( $scope ){
   
