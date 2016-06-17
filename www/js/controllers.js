@@ -43,6 +43,12 @@ angular.module('starter.controllers', [])
     $scope.openModal();
   }
   
+  $scope.editTask = function(task){
+    $scope.is_new = false;
+    $scope.task = task;
+    $scope.openModal();
+  }
+  
 })
 .controller('AllCtrl', function( $scope ){
   
