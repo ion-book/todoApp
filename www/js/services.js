@@ -15,7 +15,17 @@ angular.module('starter.services', [])
       return tasks;
     },
     getGroupDate: function(){
-      //Implementar codigo
+      var tasks = tasks.map(function(item){
+        var date = new Date( item.date );
+        item.dateGroup = new Date(date.getFullYear(), date.getMonth(), date.getDate());
+        return item;
+      });
+      return _.map(_.groupBy, 'dateGroup', function(item, i){
+        return {
+          dateGroup: new Date(i),
+          tasks: item
+        }
+      });
     },
   }
 })
