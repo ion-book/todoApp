@@ -41,7 +41,7 @@ angular.module('starter.controllers', [])
   }
   
   $scope.addTask = function(){
-    $scope.tasks.push( $scope.task );
+    TasksService.createTask( $scope.task );
     $scope.closeModal();
   }
   
